@@ -1,0 +1,404 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>AIDA · Radiation Oncology · Mayo Clinic</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;500;600;700&family=Space+Grotesk:wght@400;500;600&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="assets/css/style.css" />
+</head>
+<body>
+  <header class="topbar">
+    <div class="logo">AIDA · Radiation Oncology · Mayo Clinic</div>
+    <nav class="nav">
+      <a href="#projects">Projects</a>
+      <a href="#team">Team</a>
+      <a href="#publications">Publications</a>
+    </nav>
+  </header>
+
+  <main>
+    <section class="hero">
+      <div class="hero__content">
+        <!-- <p class="eyebrow">Artificial Intelligence & Data Analytics · Radiation Oncology</p> -->
+        <h1>Transforming Cancer Care with <span class="highlight">Next-Gen AI</span></h1>
+        <p class="lede">Welcome to <strong>AIDA</strong> — AI & Data Analytics group in Radiation Oncology, Mayo Clinic, Rochester, MN. <br>Launched in January 2025, our multi-disciplinary team pioneers the rapid translation of AI innovations into real-world patient care, delivering high-impact solutions that reshape radiation oncology.</p>
+        <!-- <div class="meta">
+          <span>Mayo Clinic, Rochester, Minnesota</span>
+        </div> -->
+      </div>
+    </section>
+
+    <section id="projects" class="section">
+      <div class="section__header">
+        <p class="eyebrow">Projects</p>
+        <h2>Translating models into measurable clinical benefit</h2>
+      </div>
+      <div class="filter-controls">
+        <button class="filter-btn active" data-filter="all">All</button>
+        <button class="filter-btn" data-filter="clinical">Clinical Decision Support</button>
+        <button class="filter-btn" data-filter="planning">Treatment Planning</button>
+        <button class="filter-btn" data-filter="automation">Workflow & Automation</button>
+      </div>
+      <div class="cards">
+        <article class="card" data-category="clinical">
+          <h3>PSA Control Tower</h3>
+          <div class="awards">
+            <span class="award-badge award-badge--gold">Presidential Award</span>
+            <span class="award-badge award-badge--cyan">VIBE AI Finalist</span>
+          </div>
+          <p>The PSA Control Tower creates a unified dashboard that uses AI to predict prostate cancer recurrence sooner. It is one of the first Mayo Clinic projects to use Mayo Clinic Platform (MCP) data. Presidential Strategic Impact Fund award winner and VIBE AI award finalist.</p>
+          <div class="tags"><span>Prostate Cancer</span><span>Predictive Modeling</span><span>MCP</span></div>
+        </article>
+        <article class="card" data-category="automation">
+          <h3>The Daily Dose</h3>
+          <div class="awards">
+            <span class="award-badge award-badge--cyan">VIBE AI Finalist</span>
+          </div>
+          <p>The Daily Dose is an LLM-generated email sent to all physicians at RadOnc, enterprise-wide, providing context and history summaries for all appointments in the day. VIBE AI award finalist.</p>
+          <p class="collaborator"><strong>Key collaborator:</strong> Jason Holmes, Ph.D.</p>
+          <div class="tags"><span>LLM</span><span>Clinical Workflow</span><span>Email Automation</span></div>
+        </article>
+        <article class="card" data-category="clinical">
+          <h3>OncoTimeline</h3>
+          <p>The OncoTimeline is an interactive visualization platform that unifies the longitudinal cancer care journey within a single dashboard. It integrates structured treatment records, free-text clinical notes, and dynamic biomarker trends to support rapid review of complex oncology histories. The interface includes an embedded AI chat assistant that enables natural language queries.</p>
+          <div class="tags"><span>Visualization</span><span>AI Chat</span><span>Longitudinal Data</span></div>
+        </article>
+        <article class="card" data-category="planning">
+          <h3>Auto-Segmentation of Vertebral Body Sectors</h3>
+          <p>Contouring CTVs for spine SBRT is a time-consuming process. Existing AI tools segment bones but do not generate customizable, guideline-based CTVs. This project creates the first spine CTV auto-segmentation model.</p>
+          <p class="collaborator"><strong>Key collaborators:</strong> Dalton Griner, Ph.D., Anne Rajkumar, M.D., John Lucido, Ph.D.</p>
+          <div class="tags"><span>Spine SBRT</span><span>Auto-Segmentation</span><span>CTV</span></div>
+        </article>
+        <article class="card" data-category="automation">
+          <h3>Automatic Treatment Summary Note Generation</h3>
+          <p>This project uses LLMs to generate automatic treatment summaries for patients. Each summary is sent into Epic, is editable, and must be signed off by a clinician before being filed.</p>
+          <div class="tags"><span>LLM</span><span>Epic Integration</span><span>Documentation</span></div>
+        </article>
+        <article class="card" data-category="clinical">
+          <h3>Cancer Center AI Project — Head & Neck Cancer Prediction</h3>
+          <p>This project develops clinically actionable AI predictions to support head & neck cancer treatment decisions. These predictions will improve accuracy in staging, guiding treatment intensity, and predicting patient-specific toxicity.</p>
+          <div class="tags"><span>Head & Neck</span><span>Toxicity Prediction</span><span>Staging</span></div>
+        </article>
+        <article class="card" data-category="automation">
+          <h3>Prior Radiation Detection from Outside Clinical Notes</h3>
+          <p>Patients receiving treatment at Mayo can have prior radiation therapy at outside institutions. Not flagging this can lead to severe issues. This project uses large language models to automatically read large amounts of outside notes and flag prior radiation therapy.</p>
+          <div class="tags"><span>LLM</span><span>Clinical Notes</span><span>Safety</span></div>
+        </article>
+        <article class="card" data-category="automation">
+          <h3>AI Monitoring (AIM) Loop</h3>
+          <p>A key concern when deploying models such as the Mayo auto-segmentation model is performance drift due to changes in imaging standards or changes in how users interact with the model. This project creates an automated monitoring system that computes metrics such as Dice score and reports them in a dashboard.</p>
+          <div class="tags"><span>Model Monitoring</span><span>Dashboard</span><span>Metrics</span></div>
+        </article>
+        <article class="card" data-category="automation">
+          <h3>AI Data Extraction from Free-Text Notes</h3>
+          <p>An enormous amount of data exists in free-text notes and cannot be efficiently queried or searched. This project uses LLMs to extract this data and make it accessible, allowing large-scale statistical studies without manual chart reviews.</p>
+          <div class="tags"><span>LLM</span><span>Data Extraction</span><span>Research</span></div>
+        </article>
+        <article class="card" data-category="planning">
+          <h3>Per-Field Proton Dose Prediction</h3>
+          <p>This project develops a neural network for predicting optimal dose in proton patients at both the plan and field level.</p>
+          <div class="tags"><span>Proton Therapy</span><span>Neural Network</span><span>Dose Prediction</span></div>
+        </article>
+        <article class="card" data-category="planning">
+          <h3>AI-Generated Plan Dose Tuning</h3>
+          <p>Radiotherapy treatment planning often requires multiple rounds of back-and-forth between physicians and dosimetrists regarding trade-offs. This project develops a novel AI method that generates an entire range of plans so that clinicians can explore the predicted trade-offs in real time.</p>
+          <div class="tags"><span>Treatment Planning</span><span>Optimization</span><span>Real-time</span></div>
+        </article>
+        <article class="card" data-category="clinical">
+          <h3>Cancer Risk Prediction with Genomics Foundation Models</h3>
+          <p>The Mayo Clinic GenAI program has created STRAND, a large-scale genomics foundation model. This project leverages STRAND to predict clinically significant prostate cancer from germline genomics data.</p>
+          <p class="collaborator"><strong>Key collaborator:</strong> Shant Ayanian, M.D.</p>
+          <div class="tags"><span>Genomics</span><span>Foundation Model</span><span>Prostate Cancer</span></div>
+        </article>
+      </div>
+      <button class="load-more-btn">Load More (<span id="remaining-count">7</span> remaining)</button>
+    </section>
+
+    <section id="team" class="section section--split">
+      <div class="section__header">
+        <p class="eyebrow">Team</p>
+        <h2>Team Members</h2>
+      </div>
+      <div class="people-cards">
+        <article class="person-card">
+          <img src="https://mcmedia.mayo.edu/AssetLink/h1341k474131qr8llm86lchaih6j3757.jpg" alt="Mark R. Waddle portrait placeholder" />
+          <div class="person-card__body">
+            <div class="person-card__head">
+              <h3>Mark R. Waddle, MD</h3>
+              <p class="role">Radiation Oncologist, Physician Co-Lead</p>
+            </div>
+            <div class="links">
+              <a href="https://www.linkedin.com/in/mark-waddle-86ab0b156/" aria-label="LinkedIn" title="LinkedIn">
+                <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="currentColor"><path d="M19 0h-14c-2.761 0-5 2.239-5 5v14c0 2.761 2.239 5 5 5h14c2.762 0 5-2.239 5-5v-14c0-2.761-2.238-5-5-5zm-11 19h-3v-11h3v11zm-1.5-12.268c-.966 0-1.75-.79-1.75-1.764s.784-1.764 1.75-1.764 1.75.79 1.75 1.764-.783 1.764-1.75 1.764zm13.5 12.268h-3v-5.604c0-3.368-4-3.113-4 0v5.604h-3v-11h3v1.765c1.396-2.586 7-2.777 7 2.476v6.759z"/></svg>
+              </a>
+              <a href="https://x.com/WaddleMd" aria-label="X (Twitter)" title="X">
+                <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="currentColor"><path d="M18.244 2.25h3.308l-7.227 8.26 8.502 11.24H16.17l-5.214-6.817L4.99 21.75H1.68l7.73-8.835L1.254 2.25H8.08l4.713 6.231zm-1.161 17.52h1.833L7.084 4.126H5.117z"/></svg>
+              </a>
+              <a href="mailto:waddle.mark@mayo.edu" aria-label="Email" title="Email">
+                <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="currentColor"><path d="M0 3v18h24v-18h-24zm6.623 7.929l-4.623 5.712v-9.458l4.623 3.746zm-4.141-5.929h19.035l-9.517 7.713-9.518-7.713zm5.694 7.188l3.824 3.099 3.83-3.104 5.612 6.817h-18.779l5.513-6.812zm9.208-1.264l4.616-3.741v9.348l-4.616-5.607z"/></svg>
+              </a>
+            </div>
+          </div>
+        </article>
+
+        <article class="person-card">
+          <img src="https://mcmedia.mayo.edu/AssetLink/kg1p5o3nn25p337j320106156f0aorn4.jpg" alt="Satomi Shiraishi portrait placeholder" />
+          <div class="person-card__body">
+            <div class="person-card__head">
+              <h3>Satomi Shiraishi, PhD</h3>
+              <p class="role">Medical Physicist, Physics Co-Lead</p>
+            </div>
+            <div class="links">
+              <a href="https://www.linkedin.com/in/satomi-shiraishi-a816b042/" aria-label="LinkedIn" title="LinkedIn">
+                <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="currentColor"><path d="M19 0h-14c-2.761 0-5 2.239-5 5v14c0 2.761 2.239 5 5 5h14c2.762 0 5-2.239 5-5v-14c0-2.761-2.238-5-5-5zm-11 19h-3v-11h3v11zm-1.5-12.268c-.966 0-1.75-.79-1.75-1.764s.784-1.764 1.75-1.764 1.75.79 1.75 1.764-.783 1.764-1.75 1.764zm13.5 12.268h-3v-5.604c0-3.368-4-3.113-4 0v5.604h-3v-11h3v1.765c1.396-2.586 7-2.777 7 2.476v6.759z"/></svg>
+              </a>
+              <a href="mailto:shiraishi.satomi@mayo.edu" aria-label="Email" title="Email">
+                <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="currentColor"><path d="M0 3v18h24v-18h-24zm6.623 7.929l-4.623 5.712v-9.458l4.623 3.746zm-4.141-5.929h19.035l-9.517 7.713-9.518-7.713zm5.694 7.188l3.824 3.099 3.83-3.104 5.612 6.817h-18.779l5.513-6.812zm9.208-1.264l4.616-3.741v9.348l-4.616-5.607z"/></svg>
+              </a>
+            </div>
+          </div>
+        </article>
+
+        <article class="person-card">
+          <img src="https://mcmedia.mayo.edu/AssetLink/nq0g8xt55l55v28nws8b86ip6g8slt3c.jpg" alt="Andrew Y.K. Foong portrait placeholder" />
+          <div class="person-card__body">
+            <div class="person-card__head">
+              <h3>Andrew Y.K. Foong, PhD</h3>
+              <p class="role">AI Scientist, AI Co-Lead</p>
+            </div>
+            <div class="links">
+              <a href="https://www.linkedin.com/in/andrew-foong-37a24b174/" aria-label="LinkedIn" title="LinkedIn">
+                <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="currentColor"><path d="M19 0h-14c-2.761 0-5 2.239-5 5v14c0 2.761 2.239 5 5 5h14c2.762 0 5-2.239 5-5v-14c0-2.761-2.238-5-5-5zm-11 19h-3v-11h3v11zm-1.5-12.268c-.966 0-1.75-.79-1.75-1.764s.784-1.764 1.75-1.764 1.75.79 1.75 1.764-.783 1.764-1.75 1.764zm13.5 12.268h-3v-5.604c0-3.368-4-3.113-4 0v5.604h-3v-11h3v1.765c1.396-2.586 7-2.777 7 2.476v6.759z"/></svg>
+              </a>
+              <a href="https://x.com/AndrewFoongYK" aria-label="X (Twitter)" title="X">
+                <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="currentColor"><path d="M18.244 2.25h3.308l-7.227 8.26 8.502 11.24H16.17l-5.214-6.817L4.99 21.75H1.68l7.73-8.835L1.254 2.25H8.08l4.713 6.231zm-1.161 17.52h1.833L7.084 4.126H5.117z"/></svg>
+              </a>
+              <a href="mailto:Foong.Andrew@mayo.edu" aria-label="Email" title="Email">
+                <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="currentColor"><path d="M0 3v18h24v-18h-24zm6.623 7.929l-4.623 5.712v-9.458l4.623 3.746zm-4.141-5.929h19.035l-9.517 7.713-9.518-7.713zm5.694 7.188l3.824 3.099 3.83-3.104 5.612 6.817h-18.779l5.513-6.812zm9.208-1.264l4.616-3.741v9.348l-4.616-5.607z"/></svg>
+              </a>
+            </div>
+          </div>
+        </article>
+        
+        <article class="person-card">
+          <img src="https://mcmedia.mayo.edu/AssetLink/k8mr32l3m74v1566337kdyp7ra331r28.jpg" alt="David M. Routman portrait placeholder" />
+          <div class="person-card__body">
+            <div class="person-card__head">
+              <h3>David M. Routman, MD</h3>
+              <p class="role">Radiation Oncologist</p>
+            </div>
+            <div class="links">
+              <a href="https://x.com/DavidRoutmanMD" aria-label="X (Twitter)" title="X">
+                <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="currentColor"><path d="M18.244 2.25h3.308l-7.227 8.26 8.502 11.24H16.17l-5.214-6.817L4.99 21.75H1.68l7.73-8.835L1.254 2.25H8.08l4.713 6.231zm-1.161 17.52h1.833L7.084 4.126H5.117z"/></svg>
+              </a>
+              <a href="mailto:Routman.David@mayo.edu" aria-label="Email" title="Email">
+                <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="currentColor"><path d="M0 3v18h24v-18h-24zm6.623 7.929l-4.623 5.712v-9.458l4.623 3.746zm-4.141-5.929h19.035l-9.517 7.713-9.518-7.713zm5.694 7.188l3.824 3.099 3.83-3.104 5.612 6.817h-18.779l5.513-6.812zm9.208-1.264l4.616-3.741v9.348l-4.616-5.607z"/></svg>
+              </a>
+            </div>
+          </div>
+        </article>
+
+        <article class="person-card">
+          <img src="https://mcmedia.mayo.edu/AssetLink/g4ec68xd0172oks4046esbm46x2r871r.jpg" alt="Andrew Y.K. Foong portrait placeholder" />
+          <div class="person-card__body">
+            <div class="person-card__head">
+              <h3>Adam C. Amundson</h3>
+              <p class="role">Program Manager</p>
+            </div>
+            <div class="links">
+              <a href="https://www.linkedin.com/in/adam-amundson/" aria-label="LinkedIn" title="LinkedIn">
+                <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="currentColor"><path d="M19 0h-14c-2.761 0-5 2.239-5 5v14c0 2.761 2.239 5 5 5h14c2.762 0 5-2.239 5-5v-14c0-2.761-2.238-5-5-5zm-11 19h-3v-11h3v11zm-1.5-12.268c-.966 0-1.75-.79-1.75-1.764s.784-1.764 1.75-1.764 1.75.79 1.75 1.764-.783 1.764-1.75 1.764zm13.5 12.268h-3v-5.604c0-3.368-4-3.113-4 0v5.604h-3v-11h3v1.765c1.396-2.586 7-2.777 7 2.476v6.759z"/></svg>
+              </a>
+              <a href="mailto:amundson.adam1@mayo.edu" aria-label="Email" title="Email">
+                <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="currentColor"><path d="M0 3v18h24v-18h-24zm6.623 7.929l-4.623 5.712v-9.458l4.623 3.746zm-4.141-5.929h19.035l-9.517 7.713-9.518-7.713zm5.694 7.188l3.824 3.099 3.83-3.104 5.612 6.817h-18.779l5.513-6.812zm9.208-1.264l4.616-3.741v9.348l-4.616-5.607z"/></svg>
+              </a>
+            </div>
+          </div>
+        </article>
+
+        <article class="person-card">
+          <img src="https://mcmedia.mayo.edu/AssetLink/a6c1854438ad6lct1f6603sxl5en7t07.jpg" alt="Srinivas Seetamsetty portrait placeholder" />
+          <div class="person-card__body">
+            <div class="person-card__head">
+              <h3>Srinivas Seetamsetty</h3>
+              <p class="role">Lead Software Engineer</p>
+            </div>
+            <div class="links">
+              <a href="https://www.linkedin.com/in/srinivas-seetamsetty-9006696/" aria-label="LinkedIn" title="LinkedIn">
+                <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="currentColor"><path d="M19 0h-14c-2.761 0-5 2.239-5 5v14c0 2.761 2.239 5 5 5h14c2.762 0 5-2.239 5-5v-14c0-2.761-2.238-5-5-5zm-11 19h-3v-11h3v11zm-1.5-12.268c-.966 0-1.75-.79-1.75-1.764s.784-1.764 1.75-1.764 1.75.79 1.75 1.764-.783 1.764-1.75 1.764zm13.5 12.268h-3v-5.604c0-3.368-4-3.113-4 0v5.604h-3v-11h3v1.765c1.396-2.586 7-2.777 7 2.476v6.759z"/></svg>
+              </a>
+              <a href="mailto:seetamsetty.srinivas@mayo.edu" aria-label="Email" title="Email">
+                <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="currentColor"><path d="M0 3v18h24v-18h-24zm6.623 7.929l-4.623 5.712v-9.458l4.623 3.746zm-4.141-5.929h19.035l-9.517 7.713-9.518-7.713zm5.694 7.188l3.824 3.099 3.83-3.104 5.612 6.817h-18.779l5.513-6.812zm9.208-1.264l4.616-3.741v9.348l-4.616-5.607z"/></svg>
+              </a>
+            </div>
+          </div>
+        </article>
+
+        <article class="person-card">
+          <img src="https://mcmedia.mayo.edu/AssetLink/ui435v1ow3cqyao88ms740d2an787bs2.jpg" alt="Mi Zhou portrait placeholder" />
+          <div class="person-card__body">
+            <div class="person-card__head">
+              <h3>Jasmine Zhou</h3>
+              <p class="role">Data Science · Mayo Clinic</p>
+            </div>
+            <div class="links">
+              <a href="https://www.linkedin.com/in/mi-zhou-b8877423b/" aria-label="LinkedIn" title="LinkedIn">
+                <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="currentColor"><path d="M19 0h-14c-2.761 0-5 2.239-5 5v14c0 2.761 2.239 5 5 5h14c2.762 0 5-2.239 5-5v-14c0-2.761-2.238-5-5-5zm-11 19h-3v-11h3v11zm-1.5-12.268c-.966 0-1.75-.79-1.75-1.764s.784-1.764 1.75-1.764 1.75.79 1.75 1.764-.783 1.764-1.75 1.764zm13.5 12.268h-3v-5.604c0-3.368-4-3.113-4 0v5.604h-3v-11h3v1.765c1.396-2.586 7-2.777 7 2.476v6.759z"/></svg>
+              </a>
+              <a href="mailto:Zhou.Mi@mayo.edu" aria-label="Email" title="Email">
+                <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="currentColor"><path d="M0 3v18h24v-18h-24zm6.623 7.929l-4.623 5.712v-9.458l4.623 3.746zm-4.141-5.929h19.035l-9.517 7.713-9.518-7.713zm5.694 7.188l3.824 3.099 3.83-3.104 5.612 6.817h-18.779l5.513-6.812zm9.208-1.264l4.616-3.741v9.348l-4.616-5.607z"/></svg>
+              </a>
+            </div>
+          </div>
+        </article>
+
+        <article class="person-card">
+          <img src="https://mcmedia.mayo.edu/AssetLink/0do6831vmu2ls040k6e7pbh22182o447.jpg" alt="Federico Mastroleo portrait placeholder" />
+          <div class="person-card__body">
+            <div class="person-card__head">
+              <h3>Federico Mastroleo, MD</h3>
+              <p class="role">Research Fellow</p>
+            </div>
+            <div class="links">
+              <a href="https://www.linkedin.com/in/federico-mastroleo/" aria-label="LinkedIn" title="LinkedIn">
+                <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="currentColor"><path d="M19 0h-14c-2.761 0-5 2.239-5 5v14c0 2.761 2.239 5 5 5h14c2.762 0 5-2.239 5-5v-14c0-2.761-2.238-5-5-5zm-11 19h-3v-11h3v11zm-1.5-12.268c-.966 0-1.75-.79-1.75-1.764s.784-1.764 1.75-1.764 1.75.79 1.75 1.764-.783 1.764-1.75 1.764zm13.5 12.268h-3v-5.604c0-3.368-4-3.113-4 0v5.604h-3v-11h3v1.765c1.396-2.586 7-2.777 7 2.476v6.759z"/></svg>
+              </a>
+              <a href="https://x.com/FMastroleoMD" aria-label="X (Twitter)" title="X">
+                <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="currentColor"><path d="M18.244 2.25h3.308l-7.227 8.26 8.502 11.24H16.17l-5.214-6.817L4.99 21.75H1.68l7.73-8.835L1.254 2.25H8.08l4.713 6.231zm-1.161 17.52h1.833L7.084 4.126H5.117z"/></svg>
+              </a>
+              <a href="mailto:mastroleo.federico@mayo.edu" aria-label="Email" title="Email">
+                <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="currentColor"><path d="M0 3v18h24v-18h-24zm6.623 7.929l-4.623 5.712v-9.458l4.623 3.746zm-4.141-5.929h19.035l-9.517 7.713-9.518-7.713zm5.694 7.188l3.824 3.099 3.83-3.104 5.612 6.817h-18.779l5.513-6.812zm9.208-1.264l4.616-3.741v9.348l-4.616-5.607z"/></svg>
+              </a>
+            </div>
+          </div>
+        </article>
+      </div>
+    </section>
+
+    <section id="publications" class="section">
+      <div class="section__header">
+        <p class="eyebrow">Publications</p>
+        <h2>Selected outputs from AIDA-led collaborations</h2>
+      </div>
+      <div class="pub-list">
+        <article class="pub">
+          <h3>From BERT to GPT-4: A systematic review of AI-Driven toxicity extraction and grading in radiation oncology</h3>
+          <p>Federico Mastroleo; Mariana Borras-Osorio; Shiv P. Patel; Sarah Peterson; Renthony Wilson; Mohammad Javad Namazi; Mi Zhou; Satomi Shiraishi; Andrew Y.K. Foong; David M. Routman; Mark R. Waddle · 2026</p>
+          <div class="links"><a href="https://doi.org/10.1016/j.tipsro.2025.100372">DOI: 10.1016/j.tipsro.2025.100372</a></div>
+        </article>
+        <article class="pub">
+          <h3>Large language models for toxicity extraction in oncology trials: A real-world benchmark in prostate radiotherapy</h3>
+          <p>Federico Mastroleo; Mariana Borras-Osorio; Shiv P. Patel; Sarah Peterson; Renthony Wilson; Mi Zhou; Satomi Shiraishi; Andrew Y.K. Foong; David M. Routman; Mark R. Waddle · 2026</p>
+          <div class="links"><a href="https://doi.org/10.1016/j.radonc.2025.111348">DOI: 10.1016/j.radonc.2025.111348</a></div>
+        </article>
+      </div>
+    </section>
+  </main>
+
+  <footer class="footer">
+    <div>
+      <p class="eyebrow">Contact</p>
+      <p>Radiation Oncology · Mayo Clinic · Rochester, MN</p>
+      <p><a href="mailto:waddle.mark@mayoclinic.org">Email</a></p>
+    </div>
+    <div class="footer__meta">
+    </div>
+  </footer>
+
+  <script>
+    // Project filtering and load-more functionality
+    const state = {
+      currentFilter: 'all',
+      visibleCount: {
+        'all': 6,
+        'clinical': 6,
+        'planning': 6,
+        'automation': 6
+      },
+      loadIncrement: 6
+    };
+
+    const filterBtns = document.querySelectorAll('.filter-btn');
+    const loadMoreBtn = document.querySelector('.load-more-btn');
+    const cards = document.querySelectorAll('.card');
+    const remainingCountEl = document.getElementById('remaining-count');
+
+    // Map filter values to data-category attributes
+    const categoryMap = {
+      'all': 'all',
+      'clinical': 'clinical',
+      'planning': 'planning',
+      'automation': 'automation'
+    };
+
+    function getFilteredCards(filter) {
+      if (filter === 'all') {
+        return Array.from(cards);
+      }
+      return Array.from(cards).filter(card => card.dataset.category === filter);
+    }
+
+    function updateCardVisibility() {
+      const filter = state.currentFilter;
+      const filteredCards = getFilteredCards(filter);
+      const visibleCount = state.visibleCount[filter];
+
+      // Hide all cards first
+      cards.forEach(card => card.classList.add('hidden'));
+
+      // Show only the visible count for current filter
+      filteredCards.slice(0, visibleCount).forEach(card => {
+        card.classList.remove('hidden');
+      });
+
+      // Update button state
+      const totalInCategory = filteredCards.length;
+      const remaining = totalInCategory - visibleCount;
+      
+      if (remaining > 0) {
+        loadMoreBtn.classList.remove('hidden');
+        remainingCountEl.textContent = remaining;
+      } else {
+        loadMoreBtn.classList.add('hidden');
+      }
+    }
+
+    // Filter button click handlers
+    filterBtns.forEach(btn => {
+      btn.addEventListener('click', () => {
+        // Update active state
+        filterBtns.forEach(b => b.classList.remove('active'));
+        btn.classList.add('active');
+
+        // Update current filter
+        state.currentFilter = btn.dataset.filter;
+
+        // Update visibility
+        updateCardVisibility();
+      });
+    });
+
+    // Load more button click handler
+    loadMoreBtn.addEventListener('click', () => {
+      const filter = state.currentFilter;
+      const filteredCards = getFilteredCards(filter);
+      const totalInCategory = filteredCards.length;
+      
+      // Increment visible count
+      state.visibleCount[filter] = Math.min(
+        state.visibleCount[filter] + state.loadIncrement,
+        totalInCategory
+      );
+
+      // Update visibility with fade-in effect
+      updateCardVisibility();
+    });
+
+    // Initialize on page load
+    updateCardVisibility();
+  </script>
+</body>
+</html>
